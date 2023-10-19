@@ -231,6 +231,7 @@ export class AddressControllerBase {
           },
         },
 
+        country: true,
         createdAt: true,
         email: true,
         firstName: true,

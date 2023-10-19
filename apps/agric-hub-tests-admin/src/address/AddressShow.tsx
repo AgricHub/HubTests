@@ -38,6 +38,7 @@ export const AddressShow = (props: ShowProps): React.ReactElement => {
             >
               <TextField source={ADDRESS_TITLE_FIELD} />
             </ReferenceField>
+            <TextField label="Country" source="country" />
             <DateField source="createdAt" label="Created At" />
             <TextField label="Email" source="email" />
             <TextField label="First Name" source="firstName" />
