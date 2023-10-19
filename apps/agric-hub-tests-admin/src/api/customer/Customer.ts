@@ -3,6 +3,7 @@ import { Order } from "../order/Order";
 
 export type Customer = {
   address?: Address | null;
+  country: string | null;
   createdAt: Date;
   email: string | null;
   firstName: string | null;

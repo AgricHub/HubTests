@@ -34,6 +34,7 @@ model Order {
 model Customer {
   address   Address? @relation(fields: [addressId], references: [id])
   addressId String?  @db.ObjectId
+  country   String?
   createdAt DateTime @default(now())
   email     String?
   firstName String?
