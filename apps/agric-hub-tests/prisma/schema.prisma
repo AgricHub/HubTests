@@ -1,5 +1,5 @@
 datasource db {
-  provider = "mongodb"
+  provider = "mysql"
   url      = env("DB_URL")
 }
 
@@ -10,7 +10,7 @@ generator client {
 model User {
   createdAt DateTime @default(now())
   firstName String?
-  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  id        String   @id @default(cuid())
   lastName  String?
   password  String
   roles     Json
@@ -21,11 +21,11 @@ model User {
 model Order {
   createdAt  DateTime  @default(now())
   customer   Customer? @relation(fields: [customerId], references: [id])
-  customerId String?   @db.ObjectId
+  customerId String?
   discount   Float?
-  id         String    @id @default(auto()) @map("_id") @db.ObjectId
+  id         String    @id @default(cuid())
   product    Product?  @relation(fields: [productId], references: [id])
-  productId  String?   @db.ObjectId
+  productId  String?
   quantity   Int?
   totalPrice Int?
   updatedAt  DateTime  @updatedAt
@@ -33,12 +33,12 @@ model Order {
 
 model Customer {
   address   Address? @relation(fields: [addressId], references: [id])
-  addressId String?  @db.ObjectId
+  addressId String?
   country   String?
   createdAt DateTime @default(now())
   email     String?
   firstName String?
-  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  id        String   @id @default(cuid())
   lastName  String?
   orders    Order[]
   phone     String?
@@ -51,7 +51,7 @@ model Address {
   city      String?
   createdAt DateTime   @default(now())
   customers Customer[]
-  id        String     @id @default(auto()) @map("_id") @db.ObjectId
+  id        String     @id @default(cuid())
   state     String?
   updatedAt DateTime   @updatedAt
   zip       Int?
@@ -60,7 +60,7 @@ model Address {
 model Product {
   createdAt   DateTime @default(now())
   description String?
-  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  id          String   @id @default(cuid())
   itemPrice   Float?
   name        String?
   orders      Order[]
