@@ -19,6 +19,7 @@ export const AddressCreate = (props: CreateProps): React.ReactElement => {
         <TextInput label="Address 1" source="address_1" />
         <TextInput label="Address 2" source="address_2" />
         <TextInput label="City" source="city" />
+        <TextInput label="Country" source="country" />
         <ReferenceArrayInput
           source="customers"
           reference="Customer"
