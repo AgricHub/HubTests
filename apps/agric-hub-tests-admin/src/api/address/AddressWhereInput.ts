@@ -7,6 +7,7 @@ export type AddressWhereInput = {
   address_1?: StringNullableFilter;
   address_2?: StringNullableFilter;
   city?: StringNullableFilter;
+  country?: StringNullableFilter;
   customers?: CustomerListRelationFilter;
   id?: StringFilter;
   state?: StringNullableFilter;

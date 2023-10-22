@@ -5,6 +5,7 @@ export type Customer = {
   address?: Address | null;
   country: string | null;
   createdAt: Date;
+  customerType?: "Seller" | "Buyer";
   email: string | null;
   firstName: string | null;
   id: string;

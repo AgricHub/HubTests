@@ -1,6 +1,6 @@
 [
   {
-    "role": "buyer",
+    "role": "user",
     "resource": "Order",
     "action": "read:own",
     "attributes": "*"
@@ -18,7 +18,7 @@
     "attributes": "*"
   },
   {
-    "role": "buyer",
+    "role": "user",
     "resource": "Order",
     "action": "create:any",
     "attributes": "*"
@@ -36,7 +36,7 @@
     "attributes": "*"
   },
   {
-    "role": "buyer",
+    "role": "user",
     "resource": "Order",
     "action": "update:any",
     "attributes": "*"
@@ -54,7 +54,7 @@
     "attributes": "*"
   },
   {
-    "role": "buyer",
+    "role": "user",
     "resource": "Order",
     "action": "delete:any",
     "attributes": "*"
@@ -72,7 +72,7 @@
     "attributes": "*"
   },
   {
-    "role": "buyer",
+    "role": "user",
     "resource": "Order",
     "action": "read:any",
     "attributes": "*"
@@ -90,7 +90,7 @@
     "attributes": "*"
   },
   {
-    "role": "buyer",
+    "role": "user",
     "resource": "Customer",
     "action": "read:own",
     "attributes": "*"
@@ -108,7 +108,7 @@
     "attributes": "*"
   },
   {
-    "role": "buyer",
+    "role": "user",
     "resource": "Customer",
     "action": "create:any",
     "attributes": "*"
@@ -126,7 +126,7 @@
     "attributes": "*"
   },
   {
-    "role": "buyer",
+    "role": "user",
     "resource": "Customer",
     "action": "update:any",
     "attributes": "*"
@@ -144,7 +144,7 @@
     "attributes": "*"
   },
   {
-    "role": "buyer",
+    "role": "user",
     "resource": "Customer",
     "action": "delete:any",
     "attributes": "*"
@@ -162,7 +162,7 @@
     "attributes": "*"
   },
   {
-    "role": "buyer",
+    "role": "user",
     "resource": "Customer",
     "action": "read:any",
     "attributes": "*"
@@ -180,7 +180,7 @@
     "attributes": "*"
   },
   {
-    "role": "buyer",
+    "role": "user",
     "resource": "Product",
     "action": "read:own",
     "attributes": "*"
@@ -198,7 +198,7 @@
     "attributes": "*"
   },
   {
-    "role": "buyer",
+    "role": "user",
     "resource": "Product",
     "action": "create:any",
     "attributes": "*"
@@ -216,7 +216,7 @@
     "attributes": "*"
   },
   {
-    "role": "buyer",
+    "role": "user",
     "resource": "Product",
     "action": "update:any",
     "attributes": "*"
@@ -234,7 +234,7 @@
     "attributes": "*"
   },
   {
-    "role": "buyer",
+    "role": "user",
     "resource": "Product",
     "action": "delete:any",
     "attributes": "*"
@@ -252,7 +252,7 @@
     "attributes": "*"
   },
   {
-    "role": "buyer",
+    "role": "user",
     "resource": "Product",
     "action": "read:any",
     "attributes": "*"
@@ -266,6 +266,96 @@
   {
     "role": "seller",
     "resource": "Product",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Organization",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Organization",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Organization",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Organization",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Organization",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Organization",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Organization",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Organization",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Organization",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Organization",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Organization",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Organization",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Organization",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Organization",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "seller",
+    "resource": "Organization",
     "action": "read:any",
     "attributes": "*"
   }
