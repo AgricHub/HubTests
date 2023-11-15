@@ -12,8 +12,15 @@ https://docs.amplication.com/how-to/custom-code
 import { ObjectType, Field } from "@nestjs/graphql";
 import { ApiProperty } from "@nestjs/swagger";
 import { Address } from "../../address/base/Address";
-import { ValidateNested, IsOptional, IsString, IsDate } from "class-validator";
+import {
+  ValidateNested,
+  IsOptional,
+  IsString,
+  IsDate,
+  IsEnum,
+} from "class-validator";
 import { Type } from "class-transformer";
+import { EnumCustomerCustomerType } from "./EnumCustomerCustomerType";
 import { Order } from "../../order/base/Order";
 
 @ObjectType()
@@ -45,6 +52,16 @@ class Customer {
   @Type(() => Date)
   @Field(() => Date)
   createdAt!: Date;
+
+  @ApiProperty({
+    required: true,
+    enum: EnumCustomerCustomerType,
+  })
+  @IsEnum(EnumCustomerCustomerType)
+  @Field(() => EnumCustomerCustomerType, {
+    nullable: true,
+  })
+  customerType?: "Seller" | "Buyer";
 
   @ApiProperty({
     required: false,

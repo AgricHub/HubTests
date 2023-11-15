@@ -12,8 +12,9 @@ https://docs.amplication.com/how-to/custom-code
 import { InputType, Field } from "@nestjs/graphql";
 import { ApiProperty } from "@nestjs/swagger";
 import { AddressWhereUniqueInput } from "../../address/base/AddressWhereUniqueInput";
-import { ValidateNested, IsOptional, IsString } from "class-validator";
+import { ValidateNested, IsOptional, IsString, IsEnum } from "class-validator";
 import { Type } from "class-transformer";
+import { EnumCustomerCustomerType } from "./EnumCustomerCustomerType";
 import { OrderCreateNestedManyWithoutCustomersInput } from "./OrderCreateNestedManyWithoutCustomersInput";
 
 @InputType()
@@ -40,6 +41,14 @@ class CustomerCreateInput {
     nullable: true,
   })
   country?: string | null;
+
+  @ApiProperty({
+    required: true,
+    enum: EnumCustomerCustomerType,
+  })
+  @IsEnum(EnumCustomerCustomerType)
+  @Field(() => EnumCustomerCustomerType)
+  customerType!: "Seller" | "Buyer";
 
   @ApiProperty({
     required: false,

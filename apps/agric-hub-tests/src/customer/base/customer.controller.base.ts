@@ -69,6 +69,7 @@ export class CustomerControllerBase {
 
         country: true,
         createdAt: true,
+        customerType: true,
         email: true,
         firstName: true,
         id: true,
@@ -104,6 +105,7 @@ export class CustomerControllerBase {
 
         country: true,
         createdAt: true,
+        customerType: true,
         email: true,
         firstName: true,
         id: true,
@@ -140,6 +142,7 @@ export class CustomerControllerBase {
 
         country: true,
         createdAt: true,
+        customerType: true,
         email: true,
         firstName: true,
         id: true,
@@ -193,6 +196,7 @@ export class CustomerControllerBase {
 
           country: true,
           createdAt: true,
+          customerType: true,
           email: true,
           firstName: true,
           id: true,
@@ -237,6 +241,7 @@ export class CustomerControllerBase {
 
           country: true,
           createdAt: true,
+          customerType: true,
           email: true,
           firstName: true,
           id: true,

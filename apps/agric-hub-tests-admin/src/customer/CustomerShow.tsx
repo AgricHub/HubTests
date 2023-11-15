@@ -24,6 +24,7 @@ export const CustomerShow = (props: ShowProps): React.ReactElement => {
         </ReferenceField>
         <TextField label="Country" source="country" />
         <DateField source="createdAt" label="Created At" />
+        <TextField label="CustomerType" source="customerType" />
         <TextField label="Email" source="email" />
         <TextField label="First Name" source="firstName" />
         <TextField label="ID" source="id" />

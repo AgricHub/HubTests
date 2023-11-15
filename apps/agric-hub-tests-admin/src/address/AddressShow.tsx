@@ -20,6 +20,7 @@ export const AddressShow = (props: ShowProps): React.ReactElement => {
         <TextField label="Address 1" source="address_1" />
         <TextField label="Address 2" source="address_2" />
         <TextField label="City" source="city" />
+        <TextField label="Country" source="country" />
         <DateField source="createdAt" label="Created At" />
         <TextField label="ID" source="id" />
         <TextField label="State" source="state" />
@@ -40,6 +41,7 @@ export const AddressShow = (props: ShowProps): React.ReactElement => {
             </ReferenceField>
             <TextField label="Country" source="country" />
             <DateField source="createdAt" label="Created At" />
+            <TextField label="CustomerType" source="customerType" />
             <TextField label="Email" source="email" />
             <TextField label="First Name" source="firstName" />
             <TextField label="ID" source="id" />

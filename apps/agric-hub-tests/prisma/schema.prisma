@@ -32,23 +32,25 @@ model Order {
 }
 
 model Customer {
-  address   Address? @relation(fields: [addressId], references: [id])
-  addressId String?
-  country   String?
-  createdAt DateTime @default(now())
-  email     String?
-  firstName String?
-  id        String   @id @default(cuid())
-  lastName  String?
-  orders    Order[]
-  phone     String?
-  updatedAt DateTime @updatedAt
+  address      Address?                 @relation(fields: [addressId], references: [id])
+  addressId    String?
+  country      String?
+  createdAt    DateTime                 @default(now())
+  customerType EnumCustomerCustomerType
+  email        String?
+  firstName    String?
+  id           String                   @id @default(cuid())
+  lastName     String?
+  orders       Order[]
+  phone        String?
+  updatedAt    DateTime                 @updatedAt
 }
 
 model Address {
   address_1 String?
   address_2 String?
   city      String?
+  country   String?
   createdAt DateTime   @default(now())
   customers Customer[]
   id        String     @id @default(cuid())
@@ -65,4 +67,18 @@ model Product {
   name        String?
   orders      Order[]
   updatedAt   DateTime @updatedAt
+}
+
+model Organization {
+  createdAt DateTime @default(now())
+  email     String?
+  id        String   @id @default(cuid())
+  location  String?
+  name      String
+  updatedAt DateTime @updatedAt
+}
+
+enum EnumCustomerCustomerType {
+  Seller
+  Buyer
 }
